@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-describe("Calender", function () {
+describe("Calendar", function () {
   let deployedContract, contract;
   let owner, address1, address2;
 
@@ -12,7 +12,7 @@ describe("Calender", function () {
     console.log(`address1->${address1.address}`);
     console.log(`address2->${address2.address}`);
 
-    contract = await ethers.getContractFactory("Calender");
+    contract = await ethers.getContractFactory("Calendar");
     deployedContract = await contract.deploy();
     await deployedContract.deployed();
   });

@@ -14,12 +14,31 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const Contract = await hre.ethers.getContractFactory("Calender");
+  const Contract = await hre.ethers.getContractFactory("Calendar");
   const contract = await Contract.deploy();
 
   await contract.deployed();
 
-  console.log("Calender deployed to:", contract.address);
+  saveFrontendFiles();
+
+  console.log("Calendar deployed to:", contract.address);
+}
+
+function saveFrontendFiles() {
+  const fs = require("fs");
+
+  const abiDir = __dirname + "/../frontend/src/abis";
+
+  if (!fs.existsSync(abiDir)) {
+    fs.mkdirSync(abiDir);
+  }
+
+  const artifact = artifacts.readArtifactSync("Calendar");
+
+  fs.writeFileSync(
+    abiDir + "/Calendar.json",
+    JSON.stringify(artifact, null, 2)
+  );
 }
 
 // We recommend this pattern to be able to use async/await everywhere

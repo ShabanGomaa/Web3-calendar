@@ -47,12 +47,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Calender - web3</h1>
+        <h1>Calendar - web3</h1>
         <div id="slogan">Make appointment using web3</div>
 
       </header>
       {!account && <button onClick={connect}>Connect wallet</button>}
-      {account && <Calendar></Calendar>}
+      {account && <Calendar account={account}></Calendar>}
     </div>
   );
 }

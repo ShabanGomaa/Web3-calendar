@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
-contract Calender {
+contract Calendar {
     uint256 rate;
-    address payable owner;
+    address payable public owner;
 
     struct Appointment {
         string title;

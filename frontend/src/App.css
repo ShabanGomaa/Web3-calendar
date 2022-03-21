@@ -4,14 +4,15 @@
 
 body {
   text-align: center;
-  background-color: #282c34;
   color: white;
-  margin: 50px;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 h1 {
   margin: 0;
-  font-size: 5em;
+  font-size: 3em;
 }
 
 #slogan {
@@ -19,11 +20,9 @@ h1 {
   font-size: 2em;
 }
 
-#calender {
+#Calendar {
   background: white;
   width: 90%;
-  margin: 25px;
-  color: black;
 }
 
 button {
@@ -36,15 +35,28 @@ button {
   margin-top: 30px;
 }
 
+#admin {
+  background: white;
+  padding: 30px;
+  margin: 20px;
+  color: black;
+}
+
+#settingsButton {
+  background: #282c34;
+  color: white;
+}
+
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 3vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom: 50px;
 }
 
 .App-link {
